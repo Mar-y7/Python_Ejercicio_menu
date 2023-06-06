@@ -90,7 +90,7 @@ while True:
         lista_cont.append (contrasena)
 
         print("Usuario nuevo a sido creado con éxito!!")
-        time.sleep(5)
+        time.sleep(3)
         os.system ("cls") 
     elif opcion == 2:
         rut = int(input("Ingrese rut: "))
@@ -109,7 +109,7 @@ while True:
             print("El USUARIO a sido ELIMINADO!!")
         else:
             print("rut ingresado NO ENCONTRADO!!")
-        time.sleep(5)
+        time.sleep(3)
         os.system ("cls")
     elif opcion == 3:
         while True:
@@ -156,8 +156,52 @@ while True:
         time.sleep(5)
         os.system ("cls")
     elif opcion == 5:
-        pass
+        while True:
+            try:
+                opcion_vista = int(input("Desea ver la lista de usuarios (1.SI o 2.NO)?"))
+                if opcion_vista in (1,2):
+                    if opcion_vista == 1:
+                        print ("Nombres de usuarios: ")
+                        print(lista_nom_us)
+                        print(lista_edad)
+                        break
+                    else:
+                        break
+                else:
+                    print("¡¡Ingrese SOLO una de las opciones (1 o 2)")
+            except:
+                print ("¡¡ERROR!! Debe ingresar solo números ENTEROS!!")
+
     elif opcion == 6:
-        pass
+        while True:
+            try:
+                opcion_eliminar = int(input("Desa ELIMINAR A TODOS los usuarios (1.SI o 2.NO)??"))
+                if opcion_eliminar in (1,2):
+                    if opcion_eliminar == 1:
+                        print ("SE ELIMINARAN TODOS LOS USUARIOS")
+                        time.sleep(1)
+                        print(".")
+                        time.sleep(1)
+                        print("..")
+                        time.sleep(1)
+                        print("...")
+                        time.sleep(1)
+                        os.system("cls")
+
+                        lista_rut.pop(posiscion_encontrada)
+                        lista_nom_us.pop(posiscion_encontrada)
+                        lista_tel.pop(posiscion_encontrada)
+                        lista_edad.pop(posiscion_encontrada)
+                        lista_correo.pop(posiscion_encontrada)
+                        lista_cont.pop(posiscion_encontrada)
+
+                        print ("SE ELIMINARON TODOS LOS DATOS DE LOS USUARIOS")
+                else:
+                    print("¡¡Ingrese SOLOS una de las opciones (1 o 2)")
+            except:
+                print("ERROR!! Ingrese SOLO números enteros!!")
+            time.sleep(3)
+            os.system ("cls")
+
     else:
         exit
