@@ -188,12 +188,12 @@ while True:
                         time.sleep(1)
                         os.system("cls")
 
-                        lista_rut.pop
-                        lista_nom_us.pop
-                        lista_tel.pop
-                        lista_edad.pop
-                        lista_correo.pop
-                        lista_cont.pop
+                        lista_rut.pop()
+                        lista_nom_us.pop()
+                        lista_tel.pop()
+                        lista_edad.pop()
+                        lista_correo.pop()
+                        lista_cont.pop()
 
                         print ("SE ELIMINARON TODOS LOS DATOS DE LOS USUARIOS")
                     else:
